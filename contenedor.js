@@ -44,7 +44,8 @@ class Contenedor {
 
     async deleteById(id) {
         const objs = await this.getAll()
-        const index = objs.findIndex(o => o.id == id)
+        const index = objs.findIndex(o => parseInt(o.id) == parseInt(id))
+        console.log("aca estas",o.id)
         if (index == -1) {
             console.log(`Error al borrar: no se encontró el id ${id}`)
         }

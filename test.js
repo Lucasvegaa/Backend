@@ -9,17 +9,9 @@ archivo.save({
     "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
     "id": 1
   })
-  archivo.save({
-    "title": "Escuadra",
-    "price": 223.45,
-    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-    "id": 1
-  })
-  archivo.save({
-    "title": "Escuadra",
-    "price": 323.45,
-    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-    "id": 1
-  })
-archivo.getById("4").then(x=>console.log("el objeto es :",x))
+  
+//archivo.deleteAll();
+//archivo.getById("4").then(x=>console.log("el objeto es :",x))
+
+//archivo.deleteById("2")
 
