@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lucasvegaa/Backend/issues"
   },
-  "homepage": "https://github.com/Lucasvegaa/Backend#readme"
+  "homepage": "https://github.com/Lucasvegaa/Backend#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
