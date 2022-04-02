@@ -32,20 +32,19 @@ class Contenedor {
     }
 
     async getAll() {
-        try{
-            const productos = await fs.promises.readFile(`./${this.nombre}.txt`,'utf-8')
-            return(JSON.parse(productos))
+        try {
+            const productos = await fs.promises.readFile(`./${this.nombre}.txt`, 'utf-8')
+            return (JSON.parse(productos))
         } catch (error) {
             console.log(`Error al recuperar datos: ${error}`);
             return [];
         }
     }
 
-
     async deleteById(id) {
         const objs = await this.getAll()
         const index = objs.findIndex(o => parseInt(o.id) == parseInt(id))
-        console.log("aca estas",o.id)
+        console.log("aca estas", o.id)
         if (index == -1) {
             console.log(`Error al borrar: no se encontró el id ${id}`)
         }

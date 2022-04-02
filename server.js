@@ -15,25 +15,11 @@ app.get('/productos', (req, res) => {
     archivo.getAll().then(x => res.send(`${JSON.stringify(x)}`))
 });
 
-app.get('/productRandom', (req, res) => {
-    let productos = archivo.getAll();
-    let random =Math.floor(Math.random() * (productos.length - 0) + 0) + 1
-    console.log(random)
-    archivo.getById(random).then(x => res.send(`${JSON.stringify(x)}`))
-});
-
-// async function getRandom() {
-//     try {
-
-//         let productos = await archivo.getAll();
-//         return Math.floor(Math.random() * (productos.length - 0) + 0) + 1
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-
-//console.log(getRandom().then(x=>x))
-//archivo.getById("2").then(x=> console.log(x))
-
+app.get('/productoRandom', (req,res) => {
+    archivo.getAll().then(x => {  
+        const i = parseInt(Math.random() * x.length)
+        res.send(x[i])
+        })
+})
 
 
