@@ -15,7 +15,7 @@ app.get('/productos', (req, res) => {
     archivo.getAll().then(x => res.send(`${JSON.stringify(x)}`))
 });
 
-app.get('/productoRandom', (req,res) => {
+app.get('/productRandom', (req,res) => {
     archivo.getAll().then(x => {  
         const i = parseInt(Math.random() * x.length)
         res.send(x[i])
